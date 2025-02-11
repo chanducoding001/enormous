@@ -1,0 +1,40 @@
+export const registerFormData = [
+    {
+      id:1,
+      name:'name',
+      placeholder:'Name',
+      type:'text'
+    },
+    {
+      id:2,
+      name:'email',
+      placeholder:'Email',
+      type:'text'
+    },
+    {
+      id:3,
+      name:'password',
+      placeholder:'Password',
+      type:'password'
+    },
+  ];
+export const loginFormData = [
+    {
+      id:2,
+      name:'email',
+      placeholder:'Email',
+      type:'text'
+    },
+    {
+      id:3,
+      name:'password',
+      placeholder:'Password',
+      type:'password'
+    },
+    {
+      id:1,
+      name:'confirmPassword',
+      placeholder:'Confirm Password',
+      type:'password'
+    },
+  ];
