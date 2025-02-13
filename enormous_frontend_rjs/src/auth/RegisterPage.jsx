@@ -19,23 +19,23 @@ const RegisterPage = () => {
             {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json", // 🛠 Important: Set content type
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify(values),
             }
         );
 
         if (!response.ok) {
-            const errorMessage = await response.text(); // 🛠 Get error message from server
+            const errorMessage = await response.text();
             console.log("Registration failed:", errorMessage);
             return;
         }
 
-        console.log("✅ Registration successful");
+        console.log("Registration successful");
         navigate("/login"); // Redirect to login page
 
     } catch (error) {
-        console.error("❌ Network error:", error);
+        console.error("Network error:", error);
     }
 };
 
