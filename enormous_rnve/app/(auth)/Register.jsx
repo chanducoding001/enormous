@@ -27,7 +27,8 @@ const Register = () => {
     console.log(values);
     try {
         const response = await fetch(
-            "http://192.168.1.9:8800/api/auth/register",
+            // "http://192.168.1.9:8800/api/auth/register",
+            "http://192.168.1.29:8800/api/auth/register",
             {
                 method: "POST",
                 headers: {

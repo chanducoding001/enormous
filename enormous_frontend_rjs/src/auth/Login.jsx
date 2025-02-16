@@ -45,7 +45,9 @@ const Login = () => {
         
         // localStorage.setItem('loginUser',unsigned);
         localStorage.setItem("loginUser", JSON.stringify(unsigned));
-        navigate('/dashboard');
+        window.dispatchEvent(new Event("loginStatusChanged"));
+
+        navigate('/');
     } catch (error) {
         console.error("❌ Network error:", error);
     }

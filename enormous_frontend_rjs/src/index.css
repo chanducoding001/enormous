@@ -5,6 +5,13 @@
     box-sizing: border-box;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+body {
+    color: #333333;
+}
+
+::placeholder{
+    color: #333;
+}
 .container{
     height: 100vh;
     width: 100%;
@@ -33,7 +40,9 @@
     /* background-color: green; */
 
 }
-
+.selectContainer{
+    background-color: green;
+}
 /* Button Styles */
 .btnStyles {
     height: 45px;
@@ -81,6 +90,10 @@
     transition: all 0.3s ease-in-out;
     background-color: #F8F9FA; /* Light Background */
     color: #333;
+    width: 100%;
+}
+.select{
+    padding:10px 12px;
 }
 
 /* Focus Effect */
@@ -119,7 +132,9 @@
 .card1 {
     width: 70%;
     height: 40%;
-    background: linear-gradient(135deg, #1e1e1e, #2a2a2a); /* Dark mode */
+    /* background: linear-gradient(135deg, #1e1e1e, #2a2a2a);  */
+    /* background: linear-gradient(135deg, #1e1e1e, #2a2a2a);  */
+    background: linear-gradient(135deg, #FF6B6B, #FF8E8E, #FF4D4D);
     color: #ffffff; /* White text for contrast */
     border-radius: 10px;
     box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.1);
@@ -130,10 +145,10 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* .card1:hover {
+.card1:hover {
     box-shadow: 6px 6px 20px rgba(255, 255, 255, 0.15);
     transform: translateY(-5px);
-} */
+}
 
 
 /* Responsive Design */
@@ -175,88 +190,3 @@
     }
 }
 
-
-
-
-
-/* *{
-    padding:0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-.btnStyles {
-    border: 2px solid #007BFF;
-    padding: 10px 40px;
-    margin: 10px;
-    border-radius: 8px;
-    background-color: #007BFF;
-    color: #FFFFFF;
-    font-size: 14px;
-    font-weight:500;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    display: inline-block;
-    text-align: center;
-}
-
-.btnStyles:hover {
-    background-color: white;
-    color: #007BFF;
-    box-shadow: 0px 4px 10px rgba(138, 43, 226, 0.5);
-}
-
-.btnStyles:active {
-    transform: scale(0.98);
-}
-
-.inputField {
-    width: 100%; 
-    padding: 10px;
-    border: 1.4px solid #f36e23;
-    border-radius: 6px;
-    font-size: 16px;
-    outline: none;
-    transition: all 0.3s ease-in-out;
-}
-
-.inputField:focus {
-    border-color: #d35400; 
-    box-shadow: 0 0 5px rgba(243, 110, 35, 0.5);
-}
-
-.inputField::placeholder {
-    color: #aaa;
-    font-size: 14px;
-}
-
-@media (max-width: 768px) {
-    .inputField {
-        padding: 8px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .inputField {
-        padding: 6px;
-        font-size: 12px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .btnStyles {
-        padding: 10px 30px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .btnStyles {
-        padding: 8px 20px;
-        font-size: 12px;
-    }
-}
- */

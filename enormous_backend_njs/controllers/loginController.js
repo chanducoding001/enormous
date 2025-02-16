@@ -9,6 +9,7 @@ const loginController = async (req,res)=>{
     }
     try{
         let user = await Users.findOne({email});
+        const role = user?.role;
         // if(role===3){
         //     user = await Parents.findOne({email});
         // }else if(role===2){
@@ -26,7 +27,7 @@ const loginController = async (req,res)=>{
         return res.status(400).json({message:'password does not match'})
     }
     //send jwt
-    let token = jwt.sign({email,name:user.name},process.env.TOKEN,{expiresIn:30*60});
+    let token = jwt.sign({email,name:user.name,role,userId:user._id},process.env.TOKEN,{expiresIn:30*60});
     // let token = jwt.sign({email,username:user.name,role:user.role},process.env.TOKEN,{expiresIn:30*60});
     // if(+role===3){
     //     token = jwt.sign({email,username:user.name,role:user.role},process.env.TOKEN,{expiresIn:30*60});

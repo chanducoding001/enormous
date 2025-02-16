@@ -3,13 +3,15 @@ import * as Yup from 'yup';
 import { registerFormData } from './authUtils';
 import useFormHook from '../hooks/useFormHook';
 import { useNavigate } from 'react-router-dom';
+import InstallButton from '../reusables/InstallButton';
 
 const RegisterPage = () => {
   const navigate = useNavigate();
   const initialValues = {
     name:'',
     email:'',
-    password:''
+    password:'',
+    role:''
   };
   const onSubmit = async (values) => {
     console.log(values);
@@ -43,6 +45,7 @@ const RegisterPage = () => {
     name: Yup.string().required('Name is required!'),
     email: Yup.string().email('Invalid email format').required('Email is required!'),
     password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required!'),
+    role: Yup.string().required("Role is required!").notOneOf([""], "Role is required!"),
   });
 
   

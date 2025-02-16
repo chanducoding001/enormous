@@ -2,9 +2,9 @@ const {Users} = require('../models/User');
 const bcrypt = require('bcrypt');
 
 const registerController = async (req,res)=>{
-    const {email,password,name} = req.body;
+    const {email,password,name,role} = req.body;
     console.log('body',req.body);
-    if(!email || !password || !name){
+    if(!email || !password || !name || !role){
         return res.status(401).json({message:'All fields are required!'})
     }
     try{
